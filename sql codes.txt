@@ -1,0 +1,123 @@
+create data base market;
+use market
+create table number(
+Id int (4),
+
+Cosumer_Name varchar(20),
+
+But_Prodect varchar(15),
+
+Price int(20),
+
+Phone_No int(15),
+
+Address varchar(20),
+
+primary key(id)
+;
+
+);
+
+
+SELECT * FROM market.number;
+
+insert into number values(001,"ola","orange",2,907835217,"3,demola");
+
+insert into number values(002,"joshef","grape",4,070783578,"4,forolagba");
+
+insert into number values(003,"adeola","water_lemon",8,098352178,"6,yetude_bronw");
+
+insert into number values(004,"blessing","apple",5,080752178,"");
+
+insert into number values(005,"Tobi","lime",9,070783578,"3,demo");
+
+insert into number values(006,"ayo","paw_paw",6,080352178,"3,demo");
+
+
+show databases;
+
+use market;
+
+show tables;
+
+select * from fruit;
+
+select cosumer_name, phone_no from shop union select price, prodect from fruit;
+
+select * from shop;
+
+select cosumer_name from shop union select price from fruit;
+
+select cosumer_nameosumer_name from fruit left join number on fruit.price = number.price;
+
+SELECT * FROM market.number;
+
+select distinct  cosumer_name, but_prodect, address from shop;
+
+select  cosumer_name, but_prodect, address from shop;
+
+select * from number limit 4;
+
+select min(price) from number;
+
+select max(price) from number;
+
+select sum(price) from number;
+
+select avg(price) from number;
+
+select * from number;
+
+select * from number where But_Prodect in ("orange","apple","lime");
+
+select * from number;
+
+select * from number where price between 2 and 9;
+
+select * from number where price between 3 and 7;
+
+select * from number where price not between 3 and 7;
+select * from number;
+
+SELECT * FROM market.shop;
+
+
+select cosumer_name from shop order by cosumer_name asc;
+
+
+select but_prodect from shop order by but_prodect desc;
+
+
+SELECT * FROM market.shop;
+
+
+
+insert into shop values(007,"meachel","3,akeyemi",07038768,"orange");
+
+
+insert into shop values(008,"blessing","3,akeyemi",07038768,"carrot");
+
+
+insert into shop values(009,"joy","3,akeyemi",07038768,"pawpaw");
+
+
+
+update fruit set price="5" where id=1;
+
+update fruit set cosumer_name="meachel" where id=3;
+
+delete from fruit where id =5;
+
+insert into shop values(10,"ayomedi","3,akeyemi",07038768,"lime");
+
+select * from shop  where cosumer_name="samuel" and but_prodect="apple";
+
+select * from fruit where id>=2;
+
+
+select sumfruit(id) from fruit;
+
+select * from fruit where id>=2;
+
+
+select sumfruit(id) from fruit;
